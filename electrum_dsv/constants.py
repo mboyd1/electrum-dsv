@@ -40,8 +40,8 @@ def read_json(filename, default):
     return r
 
 
-GIT_REPO_URL = "https://github.com/pooler/electrum-dsv"
-GIT_REPO_ISSUES_URL = "https://github.com/pooler/electrum-dsv/issues"
+GIT_REPO_URL = "https://github.com/mboyd1/electrum-dsv"
+GIT_REPO_ISSUES_URL = "https://github.com/mboyd1/electrum-dsv/issues"
 BIP39_WALLET_FORMATS = read_json('bip39_wallet_formats.json', [])
 
 
@@ -61,11 +61,11 @@ class AbstractNet:
 class BitcoinMainnet(AbstractNet):
 
     TESTNET = False
-    WIF_PREFIX = 0x80
-    ADDRTYPE_P2PKH = 48
-    ADDRTYPE_P2SH = 50
+    WIF_PREFIX = 0xB0
+    ADDRTYPE_P2PKH = 111
+    ADDRTYPE_P2SH = 58
     SEGWIT_HRP = "dsv"
-    GENESIS = "12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"
+    GENESIS = "d21da25e277bd20b7456087d69c5fee2ebc6091b410271b5cb0623c7d1e7d1b9"
     DEFAULT_PORTS = {'t': '50001', 's': '50002'}
     DEFAULT_SERVERS = read_json('servers.json', {})
     CHECKPOINTS = read_json('checkpoints.json', [])
@@ -97,11 +97,11 @@ class BitcoinMainnet(AbstractNet):
 class BitcoinTestnet(AbstractNet):
 
     TESTNET = True
-    WIF_PREFIX = 0xbf
-    ADDRTYPE_P2PKH = 111
+    WIF_PREFIX = 0xEF
+    ADDRTYPE_P2PKH = 30
     ADDRTYPE_P2SH = 58
     SEGWIT_HRP = "tdsv"
-    GENESIS = "4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0"
+    GENESIS = "707769464eb59fdd7b75cdbc5f0e72226345281852325c965b8ee1fd592fbf51"
     DEFAULT_PORTS = {'t': '51001', 's': '51002'}
     DEFAULT_SERVERS = read_json('servers_testnet.json', {})
     CHECKPOINTS = read_json('checkpoints_testnet.json', [])
@@ -133,7 +133,7 @@ class BitcoinTestnet(AbstractNet):
 class BitcoinRegtest(BitcoinTestnet):
 
     SEGWIT_HRP = "rdsv"
-    GENESIS = "530827f38f93b43ed12af0b3ad25a288dc02ed74d6d7857862df51fc56c416f9"
+    GENESIS = "707769464eb59fdd7b75cdbc5f0e72226345281852325c965b8ee1fd592fbf51"
     DEFAULT_SERVERS = read_json('servers_regtest.json', {})
     CHECKPOINTS = []
     LN_DNS_SEEDS = []

@@ -1,14 +1,7 @@
 {
-    "electrum-dsv.bysh.me": {
+    "electrum.doriancoin.org": {
         "pruning": "-",
-        "s": "51002",
-        "t": "51001",
-        "version": "1.4.2"
-    },
-    "electrum.dsv.xurious.com": {
-        "pruning": "-",
-        "s": "51002",
-        "t": "51001",
-        "version": "1.4.2"
+        "s": "51001",
+        "version": "1.16"
     }
 }
