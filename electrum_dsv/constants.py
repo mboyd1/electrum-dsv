@@ -61,7 +61,7 @@ class AbstractNet:
 class BitcoinMainnet(AbstractNet):
 
     TESTNET = False
-    WIF_PREFIX = 0xB0
+    WIF_PREFIX = 0x80
     ADDRTYPE_P2PKH = 30
     ADDRTYPE_P2SH = 28
     SEGWIT_HRP = "dsv"
