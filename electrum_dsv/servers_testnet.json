@@ -1,7 +1,8 @@
 {
     "electrum.doriancoin.org": {
         "pruning": "-",
-        "s": "51001",
+	"t": "51001",
+        "s": "51002",
         "version": "1.16"
     }
 }
