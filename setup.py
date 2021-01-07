@@ -26,7 +26,7 @@ with open('contrib/requirements/requirements-hw.txt') as f:
     requirements_hw = f.read().splitlines()
 
 # load version.py; needlessly complicated alternative to "imp.load_source":
-version_spec = importlib.util.spec_from_file_location('version', 'electrum_ltc/version.py')
+version_spec = importlib.util.spec_from_file_location('version', 'electrum_dsv/version.py')
 version_module = version = importlib.util.module_from_spec(version_spec)
 version_spec.loader.exec_module(version_module)
 
@@ -46,8 +46,8 @@ if platform.system() in ['Linux', 'FreeBSD', 'DragonFly']:
         else:
             usr_share = os.path.expanduser('~/.local/share')
     data_files += [
-        (os.path.join(usr_share, 'applications/'), ['electrum-ltc.desktop']),
-        (os.path.join(usr_share, icons_dirname), ['electrum_ltc/gui/icons/electrum-ltc.png']),
+        (os.path.join(usr_share, 'applications/'), ['electrum-dsv.desktop']),
+        (os.path.join(usr_share, icons_dirname), ['electrum_dsv/gui/icons/electrum-dsv.png']),
     ]
 
 extras_require = {
@@ -65,37 +65,37 @@ extras_require['fast'] = extras_require['crypto']
 
 
 setup(
-    name="Electrum-LTC",
+    name="Electrum-DSV",
     version=version.ELECTRUM_VERSION,
     python_requires='>={}'.format(MIN_PYTHON_VERSION),
     install_requires=requirements,
     extras_require=extras_require,
     packages=[
-        'electrum_ltc',
-        'electrum_ltc.gui',
-        'electrum_ltc.gui.qt',
-        'electrum_ltc.plugins',
-    ] + [('electrum_ltc.plugins.'+pkg) for pkg in find_packages('electrum_ltc/plugins')],
+        'electrum_dsv',
+        'electrum_dsv.gui',
+        'electrum_dsv.gui.qt',
+        'electrum_dsv.plugins',
+    ] + [('electrum_dsv.plugins.'+pkg) for pkg in find_packages('electrum_dsv/plugins')],
     package_dir={
-        'electrum_ltc': 'electrum_ltc'
+        'electrum_dsv': 'electrum_dsv'
     },
     package_data={
         '': ['*.txt', '*.json', '*.ttf', '*.otf', '*.csv'],
-        'electrum_ltc': [
+        'electrum_dsv': [
             'wordlist/*.txt',
             'locale/*/LC_MESSAGES/electrum.mo',
             'lnwire/*.csv',
         ],
-        'electrum_ltc.gui': [
+        'electrum_dsv.gui': [
             'icons/*',
         ],
     },
-    scripts=['electrum_ltc/electrum-ltc'],
+    scripts=['electrum_dsv/electrum-dsv'],
     data_files=data_files,
-    description="Lightweight Litecoin Wallet",
-    author="Thomas Voegtlin",
-    author_email="thomasv@electrum.org",
+    description="Lightweight Doriancoin Wallet",
+    author="Satoshi Hakamoto",
+    author_email="admin@doriancoin.org",
     license="MIT Licence",
-    url="https://electrum-ltc.org",
-    long_description="""Lightweight Litecoin Wallet""",
+    url="https://doriancoin.org",
+    long_description="""Lightweight Doriancoin Wallet""",
 )
