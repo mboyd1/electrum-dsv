@@ -34,7 +34,7 @@ folder.
         umask 0022 && \
         mkdir -p $FRESH_CLONE && \
         cd $FRESH_CLONE  && \
-        git clone https://github.com/pooler/electrum-dsv.git && \
+        git clone https://github.com/mboyd1/electrum-dsv.git && \
         cd electrum-dsv
     ```
 

@@ -7,7 +7,7 @@
 ;Variables
 
   !define PRODUCT_NAME "Electrum-DSV"
-  !define PRODUCT_WEB_SITE "https://github.com/pooler/electrum-dsv"
+  !define PRODUCT_WEB_SITE "https://github.com/mboyd1/electrum-dsv"
   !define PRODUCT_PUBLISHER "Electrum Technologies GmbH"
   !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 

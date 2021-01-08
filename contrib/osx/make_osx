@@ -4,7 +4,7 @@
 PYTHON_VERSION=3.7.9
 BUILDDIR=/tmp/electrum-dsv-build
 PACKAGE=Electrum-DSV
-GIT_REPO=https://github.com/pooler/electrum-dsv
+GIT_REPO=https://github.com/mboyd1/electrum-dsv
 
 export GCC_STRIP_BINARIES="1"
 
