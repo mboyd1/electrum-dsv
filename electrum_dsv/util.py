@@ -739,36 +739,16 @@ def time_difference(distance_in_time, include_seconds):
         return "over %d years" % (round(distance_in_minutes / 525600))
 
 mainnet_block_explorers = {
-    'Bchain.info': ('https://bchain.info/',
-                        {'tx': 'DSV/tx/', 'addr': 'DSV/addr/'}),
-    'Bitaps.com': ('https://dsv.bitaps.com/',
-                        {'tx': '', 'addr': ''}),
-    'Bitupper Explorer': ('https://bitupper.com/en/explorer/doriancoin/',
-                        {'tx': 'transactions/', 'addr': 'addresses/'}),
-    'Blockchair.com': ('https://blockchair.com/doriancoin/',
-                        {'tx': 'transaction/', 'addr': 'address/'}),
-    'Blockchair.com (Tor)': ('http://blkchairbknpn73cfjhevhla7rkp4ed5gg2knctvv7it4lioy22defid.onion/doriancoin/',
-                        {'tx': 'transaction/', 'addr': 'address/'}),
-    'BlockCypher.com': ('https://live.blockcypher.com/dsv/',
+    'Doriancoin.org': ('http://explorer.doriancoin.org/',
                         {'tx': 'tx/', 'addr': 'address/'}),
-    'explorer.doriancoin.net': ('http://explorer.doriancoin.net/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'LiteCore': ('https://insight.litecore.io/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'SoChain': ('https://chain.so/',
-                        {'tx': 'tx/DSV/', 'addr': 'address/DSV/'}),
-    'system default': ('blockchain://12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2/',
+    'system default': ('blockchain://d21da25e277bd20b7456087d69c5fee2ebc6091b410271b5cb0623c7d1e7d1b9/',
                         {'tx': 'tx/', 'addr': 'address/'}),
 }
 
 testnet_block_explorers = {
-    'Bitaps.com': ('https://tdsv.bitaps.com/',
-                       {'tx': '', 'addr': ''}),
-    'LiteCore': ('https://testnet.litecore.io/',
+    'Doriancoin.org': ('https://testnet-explorer.doriancoin.org/',
                         {'tx': 'tx/', 'addr': 'address/'}),
-    'SoChain': ('https://chain.so/',
-                        {'tx': 'tx/DSVTEST/', 'addr': 'address/DSVTEST/'}),
-    'system default': ('blockchain://4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0/',
+    'system default': ('blockchain://707769464eb59fdd7b75cdbc5f0e72226345281852325c965b8ee1fd592fbf51/',
                        {'tx': 'tx/', 'addr': 'address/'}),
 }
 
