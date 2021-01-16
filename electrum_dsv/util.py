@@ -739,7 +739,9 @@ def time_difference(distance_in_time, include_seconds):
         return "over %d years" % (round(distance_in_minutes / 525600))
 
 mainnet_block_explorers = {
-    'Doriancoin.org': ('http://explorer.doriancoin.org/',
+    'explorer.doriancoin.org': ('http://explorer.doriancoin.org/',
+                        {'tx': 'tx/', 'addr': 'address/'}),
+    'blocks.doriancoin.org': ('http://blocks.doriancoin.org/',
                         {'tx': 'tx/', 'addr': 'address/'}),
     'system default': ('blockchain://d21da25e277bd20b7456087d69c5fee2ebc6091b410271b5cb0623c7d1e7d1b9/',
                         {'tx': 'tx/', 'addr': 'address/'}),
